@@ -2,6 +2,19 @@
 
 Arbor explores stigmergic coordination workflows for LLM agents using shared structured substrates instead of a central supervisor.
 
+## Why "Arbor"
+
+`Arbor` means tree.
+
+The name fits the idea in a few ways:
+- roots = the shared substrate that holds the session together
+- branches = competing or evolving lines of thought
+- reinforcement = growth along promising paths
+- decay = pruning weak or unused paths
+- final synthesis = the visible shape that emerges from many local updates
+
+It also echoes biological language like **arborization**: branching growth in neurons and dendrites. That makes it a better long-term name than something purely mechanical like `stigmergic-session`, because the repo can grow beyond the first skill while keeping the same core metaphor.
+
 ## The Idea
 
 The intuition comes from ants.
