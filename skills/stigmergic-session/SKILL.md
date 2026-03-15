@@ -10,60 +10,18 @@ description: Run a shared-board multi-agent session for planning, critique, prio
 Use this skill to run a small multi-agent session where roles coordinate through a shared structured board instead of a central planner. Prefer it for fuzzy, multi-perspective tasks where partial discoveries should influence later work.
 
 Plain-English intuition:
-- In an ant colony, one ant does not hold the master plan
-- Ants leave pheromone trails in the environment
+- Ants do not need a boss ant with the whole plan
+- They leave pheromone trails in the environment
 - Other ants react to those trails
-- Useful trails get reinforced
-- Weak trails fade
+- Useful trails get reinforced, weak trails fade
 
-```text
-ANTS
-
-  find food
-     |
-     v
-  leave trail
-     |
-     v
-  others react
-   /        \
-  v          v
- reinforce   ignore
-  |          |
-  v          v
- stronger    fade
-  \          /
-   v        v
-   colony converges
-```
-
-This skill uses the same pattern for agent work:
-- the shared board is the environment
-- signals on the board are the trails
-- roles do not directly supervise each other
-- roles read the board, act on it, and leave traces for later roles
-- convergence happens because strong signals survive repeated contact
-
-```text
-AGENT SESSION
-
-  role finds idea
-       |
-       v
-  write signal
-       |
-       v
-  later roles read it
-    /           \
-   v             v
- support       object/ignore
-   |             |
-   v             v
- stronger      weaker
-   \             /
-    v           v
-    board converges
-```
+This skill applies the same pattern to agent work:
+- `board.json` is the shared environment
+- signal records are the trails
+- `reinforce` is trail reinforcement
+- `object` is friction or avoidance
+- deterministic decay is evaporation
+- convergence happens because repeatedly touched signals survive
 
 Good fits:
 - planning and scope decisions
