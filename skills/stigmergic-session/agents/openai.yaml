@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stigmergic Session"
+  short_description: "Run shared-board multi-agent sessions"
+  default_prompt: "Use $stigmergic-session to run a shared-board multi-agent session on this task."
