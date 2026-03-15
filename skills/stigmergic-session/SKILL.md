@@ -16,12 +16,54 @@ Plain-English intuition:
 - Useful trails get reinforced
 - Weak trails fade
 
+```text
+ANTS
+
+  find food
+     |
+     v
+  leave trail
+     |
+     v
+  others react
+   /        \
+  v          v
+ reinforce   ignore
+  |          |
+  v          v
+ stronger    fade
+  \          /
+   v        v
+   colony converges
+```
+
 This skill uses the same pattern for agent work:
 - the shared board is the environment
 - signals on the board are the trails
 - roles do not directly supervise each other
 - roles read the board, act on it, and leave traces for later roles
 - convergence happens because strong signals survive repeated contact
+
+```text
+AGENT SESSION
+
+  role finds idea
+       |
+       v
+  write signal
+       |
+       v
+  later roles read it
+    /           \
+   v             v
+ support       object/ignore
+   |             |
+   v             v
+ stronger      weaker
+   \             /
+    v           v
+    board converges
+```
 
 Good fits:
 - planning and scope decisions
